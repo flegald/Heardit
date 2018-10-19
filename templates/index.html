@@ -1,0 +1,52 @@
+<DOCTYPE! html>
+
+<head>
+	<title>
+		RedditReader
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href='//fonts.googleapis.com/css?family=Lato:900,400' rel='stylesheet' type='text/css'>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+	<link href="/static/reader.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class="container-fluid main-content">
+		<form>
+		  <div class="form-group">
+		    <label for="redditURL">Reddit Post URL</label>
+
+		    <input type="text" class="form-control" id="redditURL" aria-describedby="redditURLHelp" placeholder="POST URL">
+	        <small id="redditURLHelp" class="form-text text-muted">Example: https://www.reddit.com/r/AskReddit/comments/9gx68l/reddit_how_would_you_feel_about_a_law_that_bans/</small>
+
+		  </div>
+		  <button class="btn btn-primary main-sub-butt">Submit</button>
+		</form>
+
+		<!-- Modal -->
+		<div class="modal fade" id="loading-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+
+		        Give us a second while we read this post...it's interesting.
+
+
+
+		      </div>
+		      <div class="modal-footer">
+					<a id="download-butt" download><button id="download-nested-butt" class="btn btn-primary">Download</button></a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<script src="/static/reader.js"></script>
+</body>
+</html>
